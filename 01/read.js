@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.readFile('./life.txt', (err, file) => {
+fs.readFile('./my-files.txt', (err, file) => {
   if (err) {
     throw err;
   }
