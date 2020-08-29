@@ -1,5 +1,6 @@
 const fs = require('fs')
 
+
 fs.readFile('./my-files.txt', (err, data) => {
   if (err) throw err
   let list = data.toString()
@@ -13,7 +14,7 @@ fs.readFile('./my-files.txt', (err, data) => {
       extensions[ext] = []
     }
   }
-
+  
   for (let file of files) {
     let fileSplit = file.split(' ').filter(elem => elem !== '') // More elegant and simpler with regex file.split(/\s+/)
     let fileName = fileSplit.slice(8).join(' ') // The 9th column is where the name starts
